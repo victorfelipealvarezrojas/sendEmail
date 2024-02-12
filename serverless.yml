@@ -1,0 +1,21 @@
+
+service: sendemail
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  profile: adminlambda
+  stage: ${opt:stage}
+  region: us-east-1
+
+plugins:
+  - serverless-offline
+
+functions:
+  getSendEmail:
+    handler: src/handlers/sendEmail.getSendEmail
+    events:
+      - http:
+          path: sendEmail # https://dominio.xxxxx/{stage}/sendEmail
+          method: get

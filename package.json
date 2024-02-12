@@ -1,0 +1,16 @@
+{
+  "name": "sendemail",
+  "version": "1.0.0",
+  "description": "blah blah blah",
+  "main": "handler.js",
+  "scripts": {
+    "deploy:prod": "serverless deploy --stage dev --region us-east-1",
+    "offline:dev": "serverless offline --stage dev --region us-east-1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.9.9",
+    "serverless-offline": "^13.3.3"
+  }
+}
